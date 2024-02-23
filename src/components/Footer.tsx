@@ -10,7 +10,7 @@ export const Footer = () => {
 
         <div className='suuder flex justify-center items-center bg-[#18BA51]  py-[114px] bg-[url(/suuder.png)] ' >
             {/* <img src="./suuder.png" alt="" /> */}
-            <div className='w-[88%] flex justify-between flex-col gap-10 px-6' >
+            <div className='w-[88%] max-w-[1440px] flex justify-between flex-col gap-10 px-6' >
                 <div className='flex justify-center items-center gap-2 font-bold text-white text-xl'>
                     <Pineconewhite />
                     Food Delivery

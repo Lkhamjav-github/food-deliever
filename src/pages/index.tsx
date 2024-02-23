@@ -14,7 +14,10 @@ export default function Home() {
       <Header />
       <Homefood />
       <Servicemenu />
-      <Products />
+      <Products name=' Хямдралтай' />
+      <Products name='Үндсэн хоол' />
+      <Products name='Салад ба зууш' />
+      <Products name='Амттан' />
       <Footer />
     </>
   );

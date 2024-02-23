@@ -3,7 +3,7 @@ import React from 'react'
 export const Servicemenu = () => {
     return (
         <div className='flex justify-center items-center'>
-            <div className='w-[88%] max-w-[1440px] flex justify-between px-6 py-2'>
+            <div className='w-[88%] max-w-[1440px] flex justify-between px-6 py-[122px]'>
                 <div className='border-[#D6D8DB] border-[1px] p-4 rounded-xl  shadow-md  '>
                     <div className='p-[15px]'>
                         <svg width="29" height="23" viewBox="0 0 29 23" fill="none" xmlns="http://www.w3.org/2000/svg">

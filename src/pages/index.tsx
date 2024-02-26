@@ -6,6 +6,7 @@ import { Homefood } from "@/components/Homefood"
 import { Servicemenu } from "@/components/Servicemenu";
 import { Products } from "@/components/Products";
 import { Login } from "@/components/Login";
+import { Signup } from "@/components/Signup";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,7 +14,8 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Login />
+      {/* <Login /> */}
+      <Signup />
       {/* <Homefood />
       <Servicemenu />
       <Products name=' Хямдралтай' />

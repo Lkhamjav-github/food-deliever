@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Fonthideeye } from './icons/Fonthideeye';
 import { Fonteye } from './icons/Fonteye';
-
+import { Check } from './icons/Check';
+import { Checked } from './icons/Checked';
 export const Signup = () => {
     const [password, setPassword] = useState('');
     const [repassword, setRepassword] = useState('')
@@ -10,11 +11,16 @@ export const Signup = () => {
     const [name, setName] = useState('');
     const [address, setAddress] = useState('')
     const [retoggle, setRetoggle] = useState('hide');
-    console.log("name", name)
-    console.log("gmail", gmail)
-    console.log("address", address)
-    console.log("password", password)
-    console.log("name", name)
+    const [check, setCheck] = useState('check')
+    const checkBtn = () => {
+        if (check === 'check') {
+            setCheck('checked')
+
+        }
+        else {
+            setCheck('check')
+        }
+    }
     const toggleBtn = () => {
 
         if (toggle === 'hide') {
@@ -33,7 +39,6 @@ export const Signup = () => {
         }
     });
     const retoggleBtn = () => {
-
         if (retoggle === 'hide') {
             setRetoggle('seek')
         }
@@ -80,12 +85,17 @@ export const Signup = () => {
                                 {retoggle === 'hide' ? <Fonthideeye /> : <Fonteye />}
                             </div>
                         </div>
+                        <div className='flex justify-start items-start pt-12 gap-2'>
+                            {`${check === 'check' ? <Check /> : <Checked />}`}
+                            <h3>Үйлчилгээний нөхцөл зөвшөөрөх</h3>
+                        </div>
                         {/* <h3 className='flex font-normal pb-1 text-sm justify-end pt-2 text-[#3F4145]'>Нууц үг сэргээх</h3> */}
                     </div>
-                    <button className='w-[384px] bg-[#EEEFF2] text-[#1C20243D] py-[14.5px] rounded'>
+
+                    {/* <button className='w-[384px] bg-[#EEEFF2] text-[#1C20243D] py-[14.5px] rounded'>
                         Нэвтрэх
                     </button>
-                    <h3 className='flex font-normal pb-1 text-sm  pt-2 text-[#3F4145]'>Эсвэл</h3>
+                    <h3 className='flex font-normal pb-1 text-sm  pt-2 text-[#3F4145]'>Эсвэл</h3> */}
                     <button className='w-[384px] border-[1px] border-green text-[#272727] py-[14.5px] rounded'>
                         Бүртгүүлэх
                     </button>

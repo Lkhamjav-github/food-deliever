@@ -85,8 +85,8 @@ export const Signup = () => {
                                 {retoggle === 'hide' ? <Fonthideeye /> : <Fonteye />}
                             </div>
                         </div>
-                        <div className='flex justify-start items-start pt-12 gap-2'>
-                            {`${check === 'check' ? <Check /> : <Checked />}`}
+                        <div onClick={checkBtn} className='flex justify-start items-start pt-12 gap-2'>
+                            {check === 'check' ? <Check /> : <Checked />}
                             <h3>Үйлчилгээний нөхцөл зөвшөөрөх</h3>
                         </div>
                         {/* <h3 className='flex font-normal pb-1 text-sm justify-end pt-2 text-[#3F4145]'>Нууц үг сэргээх</h3> */}

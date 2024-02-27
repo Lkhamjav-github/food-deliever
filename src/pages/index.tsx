@@ -7,6 +7,7 @@ import { Servicemenu } from "@/components/Servicemenu";
 import { Products } from "@/components/Products";
 import { Login } from "@/components/Login";
 import { Signup } from "@/components/Signup";
+import { User } from "@/components/User";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,8 +15,9 @@ export default function Home() {
   return (
     <>
       <Header />
-      {/* <Login /> */}
-      <Signup />
+      <Login />
+      {/* <Signup /> */}
+      {/* <User /> */}
       {/* <Homefood />
       <Servicemenu />
       <Products name=' Хямдралтай' />

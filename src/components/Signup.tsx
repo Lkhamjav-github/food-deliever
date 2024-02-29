@@ -4,6 +4,7 @@ import { Fonteye } from './icons/Fonteye';
 import { Check } from './icons/Check';
 import { Checked } from './icons/Checked';
 import axios from 'axios'
+
 export const Signup = () => {
     const [password, setPassword] = useState('');
     const [repassword, setRepassword] = useState('')
@@ -13,6 +14,7 @@ export const Signup = () => {
     const [address, setAddress] = useState('')
     const [retoggle, setRetoggle] = useState('hide');
     const [check, setCheck] = useState('check')
+    const [user, setUsers] = useState('')
     const BASE_URL = 'http://localhost:8080/'
     const checkBtn = () => {
         if (check === 'check') {
@@ -55,55 +57,55 @@ export const Signup = () => {
             setRetoggle('hide')
         }
     });
-    // const createUser = async (event: React.SyntheticEvent) => {
-    //         if (password === repassword) {
-    //             console.log("create user")
-    //             event.preventDefault()
+    const createUser = async (event: React.SyntheticEvent) => {
+        if (password === repassword) {
+            console.log("create user")
+            event.preventDefault()
 
-    //             var formData = {
-    //                 name: event.target[0].value,
-    //                 email: event.target[1].value,
-    //                 password: event.target[2].value
-    //             }
-    //             const isValid = await userSchema.isValid(formData)
-    //             // const validate = await userSchema.validate(formData)
+            var formData = {
+                name: event.target[0].value,
+                email: event.target[1].value,
+                password: event.target[2].value
+            }
+            const isValid = await userSchema.isValid(formData)
+            // const validate = await userSchema.validate(formData)
 
 
-    //             console.log("isValid", isValid)
+            console.log("isValid", isValid)
 
-    //             if (isValid) {
-    //                 try {
+            if (isValid) {
+                try {
 
-    //                     const fetched = await fetch('http://localhost:8080/signup', {
-    //                         method: "POST",
-    //                         headers: {
-    //                             "Content-type": "application/json"
-    //                         },
-    //                         body: JSON.stringify({
-    //                             name,
-    //                             email,
-    //                             password
-    //                         })
-    //                     })
+                    const fetched = await fetch('http://localhost:8080/users', {
+                        method: "POST",
+                        headers: {
+                            "Content-type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            name,
+                            gmail,
+                            password
+                        })
+                    })
 
-    //                     alert("success")
-    //                 } catch (error) {
-    //                     console.error(error)
-    //                 }
-    //             }
-    //         }
-    //         else alert("password tohitohgui baina")
-    //     }
-    //     const fetchdata = async () => {
-    //         try {
-    //             const res = await fetch("http://localhost:8080/signup");
-    //             const data = await res.json()
-    //             setUsers(data)
-    //         }
-    //         catch (error) {
-    //             alert(error.message)
-    //         }
-    // }
+                    alert("success")
+                } catch (error) {
+                    console.error(error)
+                }
+            }
+        }
+        else alert("password tohitohgui baina")
+    }
+    const fetchdata = async () => {
+        try {
+            const res = await fetch("http://localhost:8080/signup");
+            const data = await res.json()
+            setUsers(data)
+        }
+        catch (err) {
+            console.error(err)
+        }
+    }
 
     // axios.post(BASE_URL + '/users', {
     //     firstName: 'Finn',

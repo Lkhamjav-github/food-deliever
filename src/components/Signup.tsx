@@ -3,12 +3,14 @@ import { Fonthideeye } from './icons/Fonthideeye';
 import { Fonteye } from './icons/Fonteye';
 import { Check } from './icons/Check';
 import { Checked } from './icons/Checked';
+import * as yup from 'yup';
+import { userSchema } from '../Validations/UserValidations';
 import axios from 'axios'
 
 export const Signup = () => {
     const [password, setPassword] = useState('');
     const [repassword, setRepassword] = useState('')
-    const [gmail, setGmail] = useState('')
+    const [email, setEmail] = useState('')
     const [toggle, setToggle] = useState('hide');
     const [name, setName] = useState('');
     const [address, setAddress] = useState('')
@@ -57,16 +59,21 @@ export const Signup = () => {
             setRetoggle('hide')
         }
     });
-    const createUser = async (event: React.SyntheticEvent) => {
+    const createUser = async (event: React.FormEvent<HTMLFormElement>) => {
+
+        const target = event.target;
+
+        event.preventDefault()
         if (password === repassword) {
             console.log("create user")
-            event.preventDefault()
+
 
             var formData = {
-                name: event.target[0].value,
-                email: event.target[1].value,
-                password: event.target[2].value
+                name: event,
+                email: event,
+                password: event,
             }
+            console.log("formdata ", formData)
             const isValid = await userSchema.isValid(formData)
             // const validate = await userSchema.validate(formData)
 
@@ -83,7 +90,7 @@ export const Signup = () => {
                         },
                         body: JSON.stringify({
                             name,
-                            gmail,
+                            email,
                             password
                         })
                     })
@@ -114,6 +121,7 @@ export const Signup = () => {
 
 
     return (
+
         <div className='flex justify-center items-center'>
             <div className='w-[88%] max-w-[1440px] flex justify-center px-6 py-[80px] items-center'>
                 <form onSubmit={createUser} className='flex gap-8 justify-center items-center flex-col'>
@@ -123,7 +131,7 @@ export const Signup = () => {
                         <input className='border-[1px] bg-[#F7F7F8] rounded p-4 w-[384px] border-[#ECEDF0] flex items-center justify-between' onChange={e => setName(e.target.value)} value={name} type="gmail" placeholder='Нэрээ оруулна уу' />
 
                         <h2 className='font-normal pb-1 text-sm'>Имэйл</h2>
-                        <input className='border-[1px] bg-[#F7F7F8] rounded p-4 w-[384px] border-[#ECEDF0] flex items-center justify-between' onChange={e => setGmail(e.target.value)} value={gmail} type="gmail" placeholder='Имэйл хаягаа оруулна уу' />
+                        <input className='border-[1px] bg-[#F7F7F8] rounded p-4 w-[384px] border-[#ECEDF0] flex items-center justify-between' onChange={e => setEmail(e.target.value)} value={email} type="gmail" placeholder='Имэйл хаягаа оруулна уу' />
 
                         <h2 className='font-normal pb-1 text-sm'>Хаяг</h2>
                         <input className='border-[1px] bg-[#F7F7F8] rounded p-4 w-[384px] border-[#ECEDF0] flex items-center justify-between' onChange={e => setAddress(e.target.value)} value={address} type="gmail" placeholder='Та хаягаа оруулна уу' />
@@ -147,22 +155,8 @@ export const Signup = () => {
                             {check === 'check' ? <Check /> : <Checked />}
                             <h3>Үйлчилгээний нөхцөл зөвшөөрөх</h3>
                         </div>
-                        {/* <h3 className='flex font-normal pb-1 text-sm justify-end pt-2 text-[#3F4145]'>Нууц үг сэргээх</h3> */}
                     </div>
 
-                    {/*  <form onSubmit={createUser}>
-                    <div className='flex flex-col gap-4'>
-                        <input value={name} onChange={e => setName(e.target.value)} className='border-2 bg-[#F3F4F6] rounded-lg p-4 w-[352px] border-[#D1D5DB]' type="text" placeholder='Name' />
-                        <input value={email} onChange={e => setEmail(e.target.value)} className='border-2 bg-[#F3F4F6] rounded-lg p-4 w-[352px] border-[#D1D5DB]' type="text" placeholder='Email' />
-                        <input value={password} onChange={e => setPassword(e.target.value)} className='border-2 bg-[#F3F4F6] rounded-lg p-4 w-[352px] border-[#D1D5DB]' type="password" placeholder='Password' />
-                        <input value={repassword} onChange={e => setRepassword(e.target.value)} className='border-2 bg-[#F3F4F6] rounded-lg p-4 w-[352px] border-[#D1D5DB]' type="password" placeholder='Re-password' />
-                        <button type='submit' className='bg-blue text-white rounded-[20px] h-12'>Sign up</button>
-                    </div>
-                </form> */}
-                    {/* <button className='w-[384px] bg-[#EEEFF2] text-[#1C20243D] py-[14.5px] rounded'>
-                        Нэвтрэх
-                    </button>
-                    <h3 className='flex font-normal pb-1 text-sm  pt-2 text-[#3F4145]'>Эсвэл</h3> */}
                     <button type='submit' className='w-[384px] border-[1px] border-green text-[#272727] py-[14.5px] rounded'>
                         Бүртгүүлэх
                     </button>

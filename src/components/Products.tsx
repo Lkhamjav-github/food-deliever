@@ -51,7 +51,6 @@ export const Products = (props: { name: string }) => {
                         </div>
                     </div>
                 </div>
-                {/* //mapduusnaa */}
             </div>
         </div>
     )

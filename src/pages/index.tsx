@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <Header />
       {/* <Login /> */}
-      <Signup />
+      {/* <Signup /> */}
       {/* <User /> */}
       {/* <Homefood />
       <Servicemenu />

@@ -122,7 +122,7 @@ export const Signup = () => {
 	return (
 
 		<div className='flex justify-center items-center'>
-			<div className='w-[88%] max-w-[1440px] flex justify-center px-6 py-[80px] items-center'>
+			<div className='w-[88%] max-w-[1200px] flex justify-center px-6 py-[80px] items-center'>
 				<form onSubmit={createUser} className='flex gap-8 justify-center items-center flex-col'>
 					<h1 className='font-bold text-[28px]'>Бүртгүүлэх</h1>
 					<div className='py-4'>

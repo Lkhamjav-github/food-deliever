@@ -4,7 +4,7 @@ export const Homefood = () => {
     return (
         <div className='suuder flex justify-center items-center bg-[#18BA51]  py-[170px] bg-[url(/suuder.png)] ' >
             {/* <img src="./suuder.png" alt="" /> */}
-            <div className='w-[88%] max-w-[1440px]  flex justify-between  gap-10 px-6'>
+            <div className='w-[88%] max-w-[1200px]  flex justify-between  gap-10 px-6'>
                 <div className='w-[384px] flex flex-col justify-center'>
                     <h1 className='text-white drop-shadow-inner  pb-[23px] shadow-black font-semibold text-[55px] leading-[49.5px]'>Pinecone <br></br>
                         Food delivery

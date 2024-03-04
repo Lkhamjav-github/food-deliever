@@ -5,7 +5,7 @@ export const Products = (props: { name: string }) => {
 
     return (
         <div className='flex justify-center items-center'>
-            <div className='w-[88%] max-w-[1440px] flex justify-between px-6 py-2 flex-col'>
+            <div className='w-[88%] max-w-[1200px] flex justify-between px-6 py-2 flex-col'>
                 <div className='flex justify-between w-full py-4'>
                     <div className='flex justify-center items-center'>
                         <Star />

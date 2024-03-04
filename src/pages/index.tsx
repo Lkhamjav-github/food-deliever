@@ -18,12 +18,12 @@ export default function Home() {
       {/* <Login /> */}
       {/* <Signup /> */}
       {/* <User /> */}
-      {/* <Homefood />
+      <Homefood />
       <Servicemenu />
       <Products name=' Хямдралтай' />
       <Products name='Үндсэн хоол' />
       <Products name='Салад ба зууш' />
-      <Products name='Амттан' /> */}
+      <Products name='Амттан' />
       <Footer />
     </>
   );

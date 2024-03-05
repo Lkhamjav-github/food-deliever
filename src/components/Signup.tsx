@@ -72,6 +72,7 @@ export const Signup = () => {
 				name: event,
 				email: event,
 				password: event,
+				address: event,
 			}
 			console.log("formdata ", formData)
 			const isValid = await userSchema.isValid(formData)
@@ -90,7 +91,8 @@ export const Signup = () => {
 						body: JSON.stringify({
 							name,
 							email,
-							password
+							password,
+							address
 						})
 					})
 

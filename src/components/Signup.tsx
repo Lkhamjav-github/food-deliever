@@ -68,12 +68,12 @@ export const Signup = () => {
 			};
 			if (password === repassword) {
 				const sendUserdata = await axios.post(
-					"http://localhost:8080/user",
+					"http://localhost:8080/users",
 					userData
 				);
-				alert("ok");
+				alert("successfully created ");
 			} else {
-				alert("password dahin bicin uu");
+				alert("password tohirohgvi bn ");
 			}
 		} catch (err) {
 			console.log("err axios", err);

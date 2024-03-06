@@ -83,51 +83,6 @@ export const Signup = () => {
 	const signUp = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 	};
-	// const createUser = async (event: React.FormEvent<HTMLFormElement>) => {
-
-	// 	const target = event.target;
-
-	// 	event.preventDefault()
-	// 	if (password === repassword) {
-	// 		console.log("create user")
-
-
-	// 		var formData = {
-	// 			name: event,
-	// 			email: event,
-	// 			password: event,
-	// 			address: event,
-	// 		}
-	// 		console.log("formdata ", formData)
-	// 		const isValid = await userSchema.isValid(formData)
-	// 		// const validate = await userSchema.validate(formData)
-
-	// 		console.log("isValid", isValid)
-
-	// 		if (isValid) {
-	// 			try {
-
-	// 				const fetched = await fetch('http://localhost:8080/users', {
-	// 					method: "POST",
-	// 					headers: {
-	// 						"Content-type": "application/json"
-	// 					},
-	// 					body: JSON.stringify({
-	// 						name,
-	// 						email,
-	// 						password,
-	// 						address
-	// 					})
-	// 				})
-
-	// 				alert("success")
-	// 			} catch (error) {
-	// 				console.error(error)
-	// 			}
-	// 		}
-	// 	}
-	// 	else alert("password tohitohgui baina")
-	// }
 	const fetchdata = async () => {
 		try {
 			const res = await fetch("http://localhost:8080/signup");

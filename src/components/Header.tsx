@@ -10,9 +10,9 @@ export const Header = () => {
       <div className='w-[88%] max-w-[1200px] flex justify-between px-6 py-2'>
         <div className='flex justify-center items-center gap-6'>
           <Pinecone />
-          <a className='text-sm font-bold hover:text-[#18BA51]' href="">Нүүр</a>
-          <a className='text-sm font-bold hover:text-[#18BA51]' href="">Хоолны цэс</a>
-          <a className='text-sm font-bold hover:text-[#18BA51]' href="">Хүргэлтын бүс</a>
+          <a className='text-sm font-bold hover:text-[#18BA51]' href="/">Нүүр</a>
+          <a className='text-sm font-bold hover:text-[#18BA51]' href="/">Хоолны цэс</a>
+          <a className='text-sm font-bold hover:text-[#18BA51]' href="/">Хүргэлтын бүс</a>
         </div>
 
         <div className='flex justify-center items-center gap-6'>
@@ -20,8 +20,8 @@ export const Header = () => {
             <Search />
             <input type="text" className="grow" placeholder="Search" />
           </label>
-          <a href="" className='flex justify-center items-center gap-2 text-sm font-bold hover:text-[#18BA51]' ><Bag />Сагс</a>
-          <a href="" className='flex justify-center items-center gap-2 text-sm font-bold hover:text-[#18BA51]'>< Human /> Нэвтрэх</a>
+          <a href="/" className='flex justify-center items-center gap-2 text-sm font-bold hover:text-[#18BA51]' ><Bag />Сагс</a>
+          <a href="/" className='flex justify-center items-center gap-2 text-sm font-bold hover:text-[#18BA51]'>< Human /> Нэвтрэх</a>
         </div>
       </div>
     </div>

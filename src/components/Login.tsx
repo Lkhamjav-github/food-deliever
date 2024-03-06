@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { Fonthideeye } from './icons/Fonthideeye';
 import { Fonteye } from './icons/Fonteye';
 import { useRouter } from 'next/router';
+import { Header } from './Header';
+import { access } from 'fs';
+import { ok } from 'assert';
+import { json } from 'stream/consumers';
 export const Login = () => {
 
     const [password, setPassword] = useState('');
@@ -45,7 +49,7 @@ export const Login = () => {
                 alert("email esvel password hooson baina")
             }
             if (password && email) {
-                const response = await fetch('http://localhost:8080/users', {
+                const response = await fetch('http://localhost:8080/login', {
                     method: "POST",
                     headers: {
                         "Content-type": "application/json"
@@ -59,13 +63,30 @@ export const Login = () => {
                     return alert("password eswel email buruu baina")
                 }
                 router.push("/")
+                const refreshToken = getRefreshTokenFromCookies();
+                console.log("your refresh token is: ", refreshToken)
+                // Store refresh token securely (e.g., in localStorage)
+                localStorage.setItem("refreshToken", refreshToken);
                 alert("success");
+
+
+
             }
         } catch (error) {
             alert(error);
         }
 
     };
+    const getRefreshTokenFromCookies = () => {
+        const cookies = document.cookie.split(";").reduce((acc: any, cookie) => {
+            const [name, value] = cookie.split("=").map((c) => c.trim());
+            acc[name] = value;
+            return acc;
+        }, {});
+        return cookies.refreshToken;
+
+    };
+
     useEffect(() => {
         fetchdata
     }, [])

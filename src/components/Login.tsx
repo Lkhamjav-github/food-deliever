@@ -25,7 +25,7 @@ export const Login = () => {
         if (password.length === 0) {
             setToggle('none')
         }
-        if (password.length === 1) {
+        if (password.length != 0) {
             setToggle('hide')
         }
     });
@@ -65,7 +65,7 @@ export const Login = () => {
                 router.push("/")
                 const refreshToken = getRefreshTokenFromCookies();
                 console.log("your refresh token is: ", refreshToken)
-                // Store refresh token securely (e.g., in localStorage)
+
                 localStorage.setItem("refreshToken", refreshToken);
                 alert("success");
 

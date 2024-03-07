@@ -9,14 +9,14 @@ import axios from 'axios'
 
 export const Signup = () => {
 	const [password, setPassword] = useState('');
-	const [repassword, setRepassword] = useState('')
-	const [email, setEmail] = useState('')
+	const [repassword, setRepassword] = useState('');
+	const [email, setEmail] = useState('');
 	const [toggle, setToggle] = useState('hide');
 	const [name, setName] = useState('');
-	const [address, setAddress] = useState('')
+	const [address, setAddress] = useState('');
 	const [retoggle, setRetoggle] = useState('hide');
-	const [check, setCheck] = useState('check')
-	const [user, setUsers] = useState('')
+	const [check, setCheck] = useState('check');
+	const [user, setUsers] = useState('');
 	const BASE_URL = 'http://localhost:8080/'
 	const checkBtn = () => {
 		if (check === 'check') {

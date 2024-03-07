@@ -8,6 +8,8 @@ import { Products } from "@/components/Products";
 import { Login } from "@/components/Login";
 import { Signup } from "@/components/Signup";
 import { User } from "@/components/User";
+import { Admin } from "@/components/Admin";
+import { Forgotten } from "@/components/Forgotten";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,9 +17,11 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Login />
+      {/* <Login /> */}
       {/* <Signup /> */}
       {/* <User /> */}
+      <Admin />
+      <Forgotten />
       {/* <Homefood />
       <Servicemenu />
       <Products name=' Хямдралтай' />

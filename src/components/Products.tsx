@@ -12,7 +12,7 @@ export const Products = (props: { name: string }) => {
                         <h1 className='font-semibold text-[22px]'>{props.name}</h1>
                     </div>
                     <div className='flex justify-center items-center gap-[5px] h-[30px]'>
-                        <h2 className='text-green font-normal text-sm'>Бүгдийг харах</h2>
+                        <h2 className='text-green font-normal text-sm cursor-pointer'>Бүгдийг харах</h2>
                         <Right />
                     </div>
                 </div>

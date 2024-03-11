@@ -21,9 +21,9 @@ export default function Home() {
       {/* <Signup /> */}
       {/* <User /> */}
       <Admin />
-      <Forgotten />
-      {/* <Homefood />
-      <Servicemenu />
+      {/* <Forgotten /> */}
+      {/* <Homefood /> */}
+      {/* <Servicemenu />
       <Products name=' Хямдралтай' />
       <Products name='Үндсэн хоол' />
       <Products name='Салад ба зууш' />

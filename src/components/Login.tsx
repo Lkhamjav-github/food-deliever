@@ -2,10 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Fonthideeye } from './icons/Fonthideeye';
 import { Fonteye } from './icons/Fonteye';
 import { useRouter } from 'next/router';
-import { Header } from './Header';
-import { access } from 'fs';
-import { ok } from 'assert';
-import { json } from 'stream/consumers';
+
 export const Login = () => {
 
     const [password, setPassword] = useState('');

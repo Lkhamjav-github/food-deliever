@@ -94,11 +94,6 @@ export const Signup = () => {
 		}
 	}
 
-	// axios.post(BASE_URL + '/users', {
-	//     firstName: 'Finn',
-	//     lastName: 'Williams'
-	// });
-
 
 	return (
 
